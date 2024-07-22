@@ -1,0 +1,17 @@
+<h1>App Component. {{ helloWorld }}</h1>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus minima omnis iure quidem autem? Dolores, a, reiciendis non, minus soluta neque deleniti excepturi doloremque distinctio natus quisquam consectetur eligendi! Quos.
+</p><hr>
+<app-home></app-home><hr>
+<app-about></app-about><hr>
+<app-contact></app-contact><hr>
+
+<button (click)="clickMe()">BENİ TIKLA</button><br>
+<input type="text" (keyup)="changeHelloWorldVariable($event)"><hr>
+
+<p [class]="pClassName1">Lorem ipsum dolor sit amet.</p>
+<p class="{{ pClassName2 }}">Lorem ipsum dolor sit amet.</p>
+<p [class]="setPElementClass()">Lorem ipsum dolor sit amet.</p><hr>
+
+<input type="text" [(ngModel)]="text">
+<p>{{ text }}</p>
