@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center">
+  <div class="card text-center mt-3 mb-3">
+    <div class="card-header">
+      <h2>KREDİ HESPLAMA</h2>
+      <p>Lütfen kredi hesaplama için ilgili bilgileri giriniz.</p>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+           <input name="something" class="form-control" placeholder="Kredi Tutarı" [(ngModel)]="krediTutari"> 
+        </div>
+      </form>
+      <div>
+        <select class="form-select" [(ngModel)]="taksitSayisi">
+          @for (data of taksitler; track data) {
+            <option>{{ data }}</option>
+          }
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-primary col-md-6 mt-3" (click)="hesapla()">HESAPLA</button>
+      </div>
+    </div>
+    <div class="card-footer">
+      {{ sonuc }}
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-3">
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>TAKSİT</th>
+        <th>TAKSİT TUTARI</th>
+        <th>KALAN GERİ ÖDEME</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (data of odemePlani; track data) {
+        <tr>
+          <th scope="row">{{ $index + 1 }}</th>
+          <td>{{ data.taksitTutari }}</td>
+          <td>{{ data.kalanGeriOdeme }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
