@@ -1,0 +1,12 @@
+<h1>DÖNGÜLER</h1>
+
+<ul>
+  @for (data of todos; track data) {
+    <li>
+      Index: {{ $index }} |
+      İlk kayıt mı?: {{ $first }} |
+      Son kayıt mı?: {{$last}} |
+      Veri: {{ data.work }}
+    </li>
+  }
+</ul>

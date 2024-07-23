@@ -1,0 +1,13 @@
+<h1>ŞART BLOKLARI</h1>
+
+@if (showFirstText) {
+    <p style="color: red;">Birinci Yazı</p>
+}
+@if (showSecondText) {
+    <p style="color: blue">İkinci Yazı</p>
+}
+
+<hr>
+
+<button (click)="show(1)">Birnci Yazıyı Göster</button>
+<button (click)="show(2)">İkinci Yazıyı Göster</button>
