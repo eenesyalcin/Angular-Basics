@@ -1,0 +1,17 @@
+<h1>PIPE</h1>
+
+<h2>{{ name | name }}</h2>
+
+<div>
+  <input [(ngModel)]="work">
+  <button (click)="save()">Save</button>
+</div>
+
+<div>
+  <input type="search" [(ngModel)]="search" placeholder="Search...">
+  <ul>
+    @for (item of fruits | fruit: search; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</div>
