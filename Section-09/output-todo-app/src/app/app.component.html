@@ -1,0 +1,20 @@
+<app-todo-add (addEvent)="add($event)"></app-todo-add>
+
+
+<div class="container mt-3">
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>SIRA</th>
+        <th>YAPILACAKLAR</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (data of todos; track data) {
+        <tr>
+          <th scope="row">{{ $index + 1 }}</th>
+          <td>{{ data }}</td>
+      }
+    </tbody>
+  </table>
+</div>

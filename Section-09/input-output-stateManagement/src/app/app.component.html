@@ -1,0 +1,6 @@
+<h1>STATE MANAGEMENT - INPUT/OUTPUT</h1>
+<p>Benim adım <strong>{{ isim }}</strong></p>
+
+<hr>
+
+<app-example [name]="isim" (changeNameEvent)="changeSetName($event)"></app-example>
