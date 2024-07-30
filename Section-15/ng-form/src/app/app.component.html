@@ -1,0 +1,15 @@
+<h1>NG FORM</h1>
+
+<form #loginForm="ngForm">
+  <div>
+    Email:
+    <input name="email" required minlength="3" ngModel #email email type="text">
+  </div>
+  <div>
+    Password:
+    <input name="password" required minlength="2" ngModel type="password">
+  </div>
+  <div>
+    <button [disabled]="!loginForm.valid" (click)="login(loginForm)">GİRİŞ YAP</button>
+  </div>
+</form>
