@@ -1,0 +1,13 @@
+<h1>SİGNALS</h1>
+
+<h1>{{ count() }}</h1>
+<h1>Computed: {{ countPlus() }}</h1>
+<br>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<hr>
+<ul>
+  @for (data of results(); track data) {
+    <li>{{ data }}</li>
+  }
+</ul>
